@@ -16,6 +16,7 @@ let receive = ""
 let transmit = ""
 const recordingDirectory = resolve(__dirname, 'recordings');
 
+try{
 // Handle Web Socket Connection
 wss.on("connection", function connection(ws) {
     console.log("New Connection Initiated");
@@ -47,3 +48,9 @@ wss.on("connection", function connection(ws) {
         }
     });
 });
+
+    
+}
+catch(e){
+    console.error(e);
+}
