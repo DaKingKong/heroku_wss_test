@@ -19,7 +19,7 @@ const recordingDirectory = resolve(__dirname, 'recordings');
 try{
 // Handle Web Socket Connection
 wss.on("connection", function connection(ws) {
-    console.log("New Connection Initiated");
+    console.log(`New Connection Initiated on port: ${PORT}`);
 
     ws.on("message", function incoming(message) {
         const msg = JSON.parse(message);
